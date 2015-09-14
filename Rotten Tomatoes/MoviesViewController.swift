@@ -46,10 +46,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let cell = sender as UITableViewCell
         let indexPath = tableView.indexPathForCell(cell)
-        // The following statement is giving a "[NSDictionary]? does not have a member named subscript error"
-        // Just getting the first element to continue past this.
-        //let movie = self.movies[indexPath?.row]
-        let movie = self.movies?.first
+        let movie = self.movies![indexPath!.row]
         let movieDetailsViewController = segue.destinationViewController as MovieDetailViewController
         movieDetailsViewController.movie = movie
     }
