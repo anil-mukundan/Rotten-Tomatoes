@@ -28,8 +28,7 @@ class MovieDetailViewController: UIViewController {
         var thumbnailUrl = movie.valueForKeyPath("posters.thumbnail") as String
         println(thumbnailUrl)
         let url = NSURL(fileURLWithPath: thumbnailUrl)
-        // The following statement does not work in xCode 6.2
-        //imageView.setImageWithURL(url)
+        imageView.setImageWithURL(url)
     }
 
     override func didReceiveMemoryWarning() {

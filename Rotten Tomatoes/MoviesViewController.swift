@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AFNetworking
+//import JTProgressHUD
 
 class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -15,6 +17,8 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     var movies : [NSDictionary]?
     
     var refreshControl: UIRefreshControl!
+    
+    //var progressHUD: JTProgressHUD = JTProgressHUD()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,8 +74,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         var thumbnailUrl = movie.valueForKeyPath("posters.thumbnail") as String
         println(thumbnailUrl)
         let url = NSURL(fileURLWithPath: thumbnailUrl)
-        // The following statement does not work in xCode 6.2
-        //cell.posterView.setImageWithURL(url)
+        cell.posterView.setImageWithURL(url)
         return cell
     }
     
