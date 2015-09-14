@@ -81,6 +81,10 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     
     func onRefresh() {
         println("Refreshing View")
+        let json : NSDictionary = fetchResponseFromRottenTomatoes() as NSDictionary
+        self.movies = json["movies"] as? [NSDictionary]
+        self.tableView.reloadData()
+        self.refreshControl.endRefreshing()
     }
     
     func fetchResponseFromRottenTomatoes () -> AnyObject {
