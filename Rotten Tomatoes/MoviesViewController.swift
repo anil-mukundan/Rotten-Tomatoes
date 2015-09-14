@@ -14,6 +14,8 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     
     var movies : [NSDictionary]?
     
+    var refreshControl: UIRefreshControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,6 +27,10 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         
         tableView.dataSource = self
         tableView.delegate = self
+        
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: "onRefresh", forControlEvents: UIControlEvents.ValueChanged)
+        tableView.insertSubview(refreshControl, atIndex: 0)
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,15 +39,16 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let cell = sender as UITableViewCell
+        let indexPath = tableView.indexPathForCell(cell)
+        // The following statement is giving a "[NSDictionary]? does not have a member named subscript error"
+        // Just getting the first element to continue past this.
+        //let movie = self.movies[indexPath?.row]
+        let movie = self.movies?.first
+        let movieDetailsViewController = segue.destinationViewController as MovieDetailViewController
+        movieDetailsViewController.movie = movie
     }
-    */
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let movies = movies {
@@ -60,9 +67,20 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         cell.titleLabel.text = movie["title"] as? String
         cell.synopsisLabel.text = movie["synopsis"] as? String
         
-        //let imageurl = NSURL(string: movie.valueForKeyPath("posters.thumbnail"))
-        // cell.posterView.setImageWithURL(imageurl)
+        var thumbnailUrl = movie.valueForKeyPath("posters.thumbnail") as String
+        println(thumbnailUrl)
+        let url = NSURL(fileURLWithPath: thumbnailUrl)
+        // The following statement does not work in xCode 6.2
+        //cell.posterView.setImageWithURL(url)
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
+    func onRefresh() {
+        println("Refreshing View")
     }
     
     func fetchResponseFromRottenTomatoes () -> AnyObject {

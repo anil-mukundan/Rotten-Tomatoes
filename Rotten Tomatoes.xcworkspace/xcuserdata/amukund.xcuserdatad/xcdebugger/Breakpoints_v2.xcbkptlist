@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rotten Tomatoes/MovieDetailViewController.swift"
+            timestampString = "463878913.603228"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "MovieDetailViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Rotten_Tomatoes.MovieDetailViewController.imageView.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UIImageView&gt;"
+                  moduleName = "Rotten Tomatoes"
+                  urlString = "file:///Users/amukund/codepath/Rotten%20Tomatoes/Rotten%20Tomatoes/MovieDetailViewController.swift"
+                  timestampString = "463879176.472413"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Rotten_Tomatoes.MovieDetailViewController.imageView.materializeForSet : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UIImageView&gt;"
+                  moduleName = "Rotten Tomatoes"
+                  urlString = "file:///Users/amukund/codepath/Rotten%20Tomatoes/Rotten%20Tomatoes/MovieDetailViewController.swift"
+                  timestampString = "463879176.472669"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Rotten_Tomatoes.MovieDetailViewController.init (Rotten_Tomatoes.MovieDetailViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; Rotten_Tomatoes.MovieDetailViewController"
+                  moduleName = "Rotten Tomatoes"
+                  urlString = "file:///Users/amukund/codepath/Rotten%20Tomatoes/Rotten%20Tomatoes/MovieDetailViewController.swift"
+                  timestampString = "463879176.472981"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "53">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Rotten_Tomatoes.MovieDetailViewController.init (Rotten_Tomatoes.MovieDetailViewController.Type)() -&gt; Rotten_Tomatoes.MovieDetailViewController"
+                  moduleName = "Rotten Tomatoes"
+                  urlString = "file:///Users/amukund/codepath/Rotten%20Tomatoes/Rotten%20Tomatoes/MovieDetailViewController.swift"
+                  timestampString = "463879176.473142"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Rotten_Tomatoes.MovieDetailViewController.init (Rotten_Tomatoes.MovieDetailViewController.Type)(coder : ObjectiveC.NSCoder) -&gt; Rotten_Tomatoes.MovieDetailViewController"
+                  moduleName = "Rotten Tomatoes"
+                  urlString = "file:///Users/amukund/codepath/Rotten%20Tomatoes/Rotten%20Tomatoes/MovieDetailViewController.swift"
+                  timestampString = "463879176.473295"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rotten Tomatoes/MoviesViewController.swift"
+            timestampString = "463881772.227924"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "onRefresh()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
